@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/hello/world/">hello World</a>
+            </li>
+            <li>
+                <a href="/hello/world/">Lunch</a>
+            </li>
+            <li>
+                <a href="/hello/world/">Lotto</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- 
+        1. Project ROOT / templates / 폴더 생성
+        2. 해당 폴더를 django에게 알려줌 (settings.py > TEMPLATES > DIRS)
+        3. ROOT / templates / base.html 생성
+        4. base.html 안에 block 을 통해서 블럭을 생성
+        5. 각각의 html extends 'base.html' 로 확장
+        6. block 이름 맞춰서 내용만 작성
+     -->
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
