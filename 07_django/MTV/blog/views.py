@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 
-
 from . models import Article
+
+from .forms import ArticleForm
 # Create your views here.
 
 
@@ -24,19 +25,36 @@ def detail(request, article_pk):
 
 # 글 쓰기 화면 (Create)
 def new(request):
-    return render(request, 'blog/new.html')
+    article_form = ArticleForm()
+    context = { 'article_form' : article_form,}
+    # return render(request, 'blog/new.html')
+    return render(request, 'blog/form_new.html', context)
 
 # 글 DB에 실제 저장
 def create(request):
     # 새로운 article 객체 생성(레코드 추가)
-    article = Article()
-    article.title = request.POST['title']
-    article.content = request.POST['content']
-    article.save()
+    # article = Article()
+    article_form = ArticleForm(request.POST)
+    
+    # Validation (데이터 유효성 검사)
+    # 넘어온 데이터가 유효하다면,
+    if article_form.is_valid():
+         # 저장하고,
+        article = article_form.save()
+        # detail 페이지로 이동
+
+    # article.title = request.POST['title']
+    # article.content = request.POST['content']
+    # article.save()
 
     # detail 로 redirect 하자
-    return redirect('blog:detail', article.pk)
-
+    # return redirect('blog:detail', article.pk)
+        return redirect('blog:detail', article.pk)
+    # 넘어온 데이터가 유효하지 않다면
+    else:
+        # 다시 데이터 입력 html 출력
+        context = { 'article_form' : article_form, }
+        return render(request, 'blog/form_new.html', context)
 
 # 글 수정 화면 (Update)
 def edit(request, article_pk):
