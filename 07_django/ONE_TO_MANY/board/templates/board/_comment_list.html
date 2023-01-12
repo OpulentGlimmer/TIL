@@ -1,0 +1,11 @@
+<ul>
+    {% for comment  in article.comment_set.all %}
+        {% comment %} comment.content 는 content에 있는 값을 삭제하는 것임 {% endcomment %}
+        <li>{{ comment.content }}</li>
+        {% comment %} 데이터베이스에 영향을 주니까 POST방식으로 한다 {% endcomment %}
+            <form action="{% url 'board:delete_comment' article.pk comment.pk %}" method="POST" style="display:inline-block;">
+                {% csrf_token %}
+                <button>x</button>
+            </form>
+    {% endfor %}
+</ul>
