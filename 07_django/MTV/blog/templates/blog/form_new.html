@@ -7,7 +7,7 @@
 <form action="{% url 'blog:create' %}" method="POST">
     {% csrf_token %}
     
-    {{ article_form.as_p}}
+    {{ article_form.as_p }}
 
     <button>제출</button>
 </form>

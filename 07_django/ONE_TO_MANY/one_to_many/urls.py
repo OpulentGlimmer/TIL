@@ -1,3 +1,4 @@
+# Master urls.py
 """one_to_many URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,7 +19,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # 방문자가 articles/ 로 접속할 때는 board 앱 폴더의 urls.py를 참조하기 위해 include를 쓴다.
     path('articles/', include('board.urls')),
+    # 방문자가 accounts/ 로 접속할 때는 accounts 앱 폴더의 urls.py를 참조하기 위해 include를 쓴다.
+    path('accounts/', include('accounts.urls')),
     # articles/1/
     # articles/
     # articles/create
