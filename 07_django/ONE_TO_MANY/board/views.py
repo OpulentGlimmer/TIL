@@ -57,6 +57,40 @@ def article_detail(request, article_pk):
     return render(request, 'board/detail.html', context)
 
 
+# update_article, delete_article
+
+
+@login_required
+@require_http_methods(['GET', 'POST'])
+def update_article(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    # 작성자 아니면 돌려보내기
+    if request.user != article.user:
+        return redirect('board:article_detail', article.pk)
+
+    if request.method == 'POST':
+        form = ArticleForm(request.POST, instance=article)        
+        if form.is_valid():
+            # 기존에 저장된 user_id 갱신할 필요가 없기때문에 commit=False 필요 X
+            article = form.save()
+            return redirect('board:article_detail', article.pk)
+    else:
+        form = ArticleForm(instance=article)
+    context = {'form': form}
+    return render(request, 'board/form.html', context)
+
+
+@login_required
+@require_POST
+def delete_article(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    if request.user == article.user:
+        article.delete()
+        return redirect('board:article_index')
+    else:
+        return redirect('board:article_detail', article.pk)
+
+
 
 @login_required
 @require_POST  # 댓글을 달면 db에 영향이 가서 POST이다.

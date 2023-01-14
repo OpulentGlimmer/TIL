@@ -1,8 +1,17 @@
 # accouts/views.py
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+
+from django.contrib.auth import get_user_model
 from django.contrib.auth import login as auth_login, logout as auth_logout
-from django.views.decorators.http import require_http_methods
+from django.views.decorators.http import require_http_methods, require_POST
+from django.contrib.auth.decorators import login_required
+
+
+from django.contrib.auth.forms import PasswordChangeForm
+from .forms import CustomUserChangeForm
+
+User = get_user_model()
 
 
 @require_http_methods(['GET', 'POST'])
@@ -40,3 +49,57 @@ def login(request):
 def logout(request):
     auth_logout(request)
     return redirect('board:article_index')
+
+
+
+@login_required
+def profile(request, username):
+    profile_user = get_object_or_404(User, username=username)  # User 모델에서 username으로 검색하여 찾은 객체
+    
+    context = {
+        'profile_user': profile_user,
+    }
+
+    return render(request, 'accounts/profile.html', context)
+    
+
+# 회원정보 변경/삭제
+@login_required
+@require_http_methods(['GET', 'POST'])
+def update(request):
+    if request.method == 'POST':
+        form = CustomUserChangeForm(request.POST, instance=request.user)
+        if form.is_valid():
+            user = form.save()
+            return redirect('accounts:profile', user.username)
+    else:
+        form = CustomUserChangeForm(instance=request.user)
+    context = {'form': form}
+    return render(request, 'accounts/update.html', context)
+
+
+@require_POST
+def delete(request):
+    if request.user.is_authenticated:
+        request.user.delete()
+        auth_logout(request)
+    return redirect('board:article_index')
+
+
+@login_required
+@require_http_methods(['GET', 'POST'])
+def password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            # PasswordChangeForm 은 forms.Form을 상속받았으나, 예외적으로 save 메서드가 존재
+            user = form.save()
+
+            from django.contrib.auth import update_session_auth_hash
+            update_session_auth_hash(request, request.user)
+            
+            return redirect('accounts:profile', user.username)
+    else:    
+        form = PasswordChangeForm(request.user)
+    context = {'form': form}
+    return render(request, 'accounts/password.html', context)

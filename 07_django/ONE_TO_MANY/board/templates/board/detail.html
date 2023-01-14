@@ -7,18 +7,18 @@
 <p>by - {{ article.user.username }}</p>
 {% if request.user == article.user %}
 <div>
-    <button>수정</button>
-    <button>삭제</button>
+    <a href="{% url 'board:update_article' article.pk %}">
+      <button class="btn btn-warning">Update</button>
+    </a>
+  </div>
+  
+<div>
+    <form action="{% url 'board:delete_article' article.pk %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-danger">Delete</button>
+    </form>
 </div>
 {% endif %}
-
-
-{% comment %} 댓글 입력창
-<form action="{% url 'board:create_comment' article.pk %}" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <button>제출!</button>
-</form> {% endcomment %}
 
 <hr>
 <!-- component(부품) -->

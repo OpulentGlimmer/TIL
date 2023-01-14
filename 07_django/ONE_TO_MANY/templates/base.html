@@ -19,6 +19,9 @@
         <li>
             <a href="{% url 'accounts:logout' %}">Logout</a>
         </li>
+        <li>
+            <a href="{% url 'accounts:profile' user.username %}">{{ user.username }}'s profile</a>
+        </li>
         {% else %}
         <li>
             <a href="{% url 'accounts:signup' %}">Signup</a>

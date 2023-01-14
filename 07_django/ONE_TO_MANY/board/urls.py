@@ -18,6 +18,12 @@ urlpatterns = [
     
     # articles/1/ (삭제)
     path('<int:article_pk>/', views.article_detail, name='article_detail'),
+
+    # article/1/update/
+    path('<int:article_pk>/update/', views.update_article, name='update_article'),
+    # article/1/delete/
+    path('<int:article_pk>/delete/', views.delete_article, name='delete_article'),
+
     # articles/1/comments/create/  (댓글 생성)
     path('<int:article_pk>/comments/create/', views.create_comment, name='create_comment'),
     # articles/1/comments/2/delete/ : 1번 article에 달려 있는 2번 comments를 지우겠다
