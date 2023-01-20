@@ -29,7 +29,7 @@ def create_article(request):
 def article_index(request):
     articles = Article.objects.all()
     context = {'articles': articles, }
-    return render(request, 'board/index.html', context)
+    return render(request, 'board/article_index.html', context)
 
 
 @require_safe  # GET, (HEAD) 요청만 허용하겠다.

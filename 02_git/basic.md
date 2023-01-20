@@ -178,3 +178,89 @@ $ git pull origin master
 |작업 종료|`$ git push origin master`|
 |다른 컴퓨터에서 반복|`$ git pull origin master`|
 
+
+---
+
+# code ~/.bash_profile
+
+# alias gl='git log --oneline --graph'
+# alias jn= 'jupyter notebook'
+
+# $ git branch b1
+
+# $ git switch b1
+
+# $ git switch master
+
+블랜치는 스티커와 비슷하다.
+
+$ touch b1.txt
+
+$ git switch b1
+
+$ git add b1.txt
+
+$ git switch master
+
+$ git commit -m 'add b1.txt'
+
+$ gl
+$ code ~/.bash_profile
+$ code ~/.bash_history
+
+$ git branch b1
+$ git switch master
+$ git switch b1
+
+$ touch b1.txt
+
+$ git switch master
+
+$ git add b1.txt
+$ git switch master
+
+$ git commit -m 'add b1.txt'
+
+$ gl
+
+$ git switch master 
+
+$ gl
+
+$ git switch b1
+
+$ git add b1.txt
+
+$ git commit -m 'more b1.txt'
+
+$ git switch master
+
+# $ git merge b1
+
+$ git add .
+
+$ git commit -m 'b1-1'
+
+$ git branch b2
+
+$ git switch b2
+
+# $ git switch -c b2
+
+
+$ rm b2.txt
+
+# 충돌은 같은 파일에 같은 줄 건드릴 때 충돌이 일어남
+
+Auto-merging master.txt
+CONFLICT (content): Merge conflict in master.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git merge b1
+$ git add .
+$ git commit -m 'Merge'
+
+
+$ git branch -d b1 b2 c1
+
+$ git branch -D b1 b2 c1 

@@ -1,4 +1,3 @@
-# accouts/views.py
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -21,7 +20,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             auth_login(request, user)
-            return redirect('board:article_index')
+            return redirect('health:article_index')
     else:
         form = CustomUserCreationForm()
     context = {'form': form }
@@ -38,7 +37,7 @@ def login(request):
             auth_login(request, user)
             # None / URL string
             next = request.GET.get('next')
-            return redirect(next or 'board:article_index')
+            return redirect(next or 'health:article_index')
                 
     else:
         form = AuthenticationForm()
@@ -48,7 +47,7 @@ def login(request):
 
 def logout(request):
     auth_logout(request)
-    return redirect('board:article_index')
+    return redirect('health:article_index')
 
 
 # 아래는 수업에서 다루지 않음
@@ -83,7 +82,7 @@ def delete(request):
     if request.user.is_authenticated:
         request.user.delete()
         auth_logout(request)
-    return redirect('board:article_index')
+    return redirect('health:article_index')
 
 
 @login_required
