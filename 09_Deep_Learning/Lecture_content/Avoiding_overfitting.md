@@ -72,6 +72,9 @@
 - 새로운 x데이터에도 Standardization을 적용한다.
 - 참고로 Standardization을 중간중간에 적용하면 학습효과가 빨라지고, 학습 성능이 높아진다.
 
+![alt text](./Process_of_Batch_Normalization.png)
+
+
 
 
 
