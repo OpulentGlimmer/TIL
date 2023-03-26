@@ -1,4 +1,4 @@
-`# 1. Avoiding overfitting
+# 1. Avoiding overfitting
 
 ## 1. Dropout (2012, Geoffrey Hinton)
 - 신경망에 적용할 수 있다.
