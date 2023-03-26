@@ -14,7 +14,7 @@
 - dropout 예를 들자면 고양이 이미지를 눈, 입만 보여주고, 코, 꼬리는 안 보여주는 것을 의미한다.
 - dropout하면 고양이 사진 1장을 학습했을 때 바로 고양이라고 맞추는 것과 비슷한 효과를 얻을 수 있다.
 
-![alt text](./Dropout.png)
+![alt text](./Picture//Dropout.png)
 
 ## 위에 있는 그림 설명
 
@@ -25,7 +25,7 @@
 - 16가지 경우의 수를 Dropout를 적용해서 나온 결과이다.
 - Dropout하면 성능은 조금 떨어지지만 서로 다른 모델들을 적용이 가능하고, overfitting 나타나는 것을 줄일 수 있다.
   
-![alt text](./With_Dropout.png)
+![alt text](./Picture/With_Dropout.png)
 
 ## 위에 있는 그림 설명
 
@@ -42,7 +42,7 @@
 
 ## dropout 사용하는 방법
 
-![alt text](./Dropout_Alexnet.png)
+![alt text](./Picture/Dropout_Alexnet.png)
 
 ## 위에 있는 그림 설명
 
@@ -61,7 +61,7 @@
 - Standardization과 같은 모델은 Input data뿐만 아니라 신경망 내부의 중간에 있는 Hidden layer로의 input로의 input에도 적용하는 것이 Batch Normalization이다.
 - 참고로 Activation function을 적용하기 전에 Batch normalization을 먼저 적용한다. (앞과 뒤 중 어느 곳에 삽입할지는 논의/실험 중이다.)
 
-![alt text](./Layer.png)
+![alt text](./Picture/Layer.png)
 
 ## 위에 있는 그림 설명
 
@@ -72,7 +72,7 @@
 - 새로운 x데이터에도 Standardization을 적용한다.
 - 참고로 Standardization을 중간중간에 적용하면 학습효과가 빨라지고, 학습 성능이 높아진다.
 
-![alt text](./Process_of_Batch_Normalization.png)
+![alt text](./Picture/Process_of_Batch_Normalization.png)
 
 
 

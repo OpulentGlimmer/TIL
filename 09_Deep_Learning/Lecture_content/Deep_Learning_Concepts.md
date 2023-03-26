@@ -6,13 +6,13 @@
 
 ## 2. Single Layer Perceptron(단층 퍼셉트론)
 - 뉴런을 본따서 만든 알고리즘 하나의 단위
-![alt text](./Single_layer_perceptron.png)
+![alt text](./Picture/Single_layer_perceptron.png)
 - 단층 Perceptron으로 AND, OR문제는 해결이 가능하나, XOR문제는 해결이 불가능하다.
 ---
 - AND 게이트
 - input(x1, x2)값 둘 다 1이면 y=1인 게이트
 
-![alt text](./AND.png)
+![alt text](./Picture/AND.png)
 
 |x1|x2|AND(x1, x2)|
 |:------:|:------:|:------:|
@@ -24,7 +24,7 @@
 - OR 게이트
 - input(x1, x2)값 중 하나만 1이면 y=1인 게이트
 
-![alt text](./OR.png)
+![alt text](./Picture/OR.png)
 
 
 |x1|x2|OR(x1, x2)|
@@ -39,10 +39,10 @@
 - 복수의 Perceptron을 연결한 구조
 - 퍼셉트론(Perceptron)을 층으로 쌓은 것으로, 입력층과 출력층 사이에 은닉층이 존재하는 것
 
-![alt text](./Multi_layer_perceptron_.png)
+![alt text](./Picture/Multi_layer_perceptron_.png)
 
 - Multi layer perceptron(다층 퍼셉트론: AND, NAND, OR 조합)으로 XOR 게이트를 구현할 수 있다.
-![alt text](./Multi_layer_perceptron.png)
+![alt text](./Picture/Multi_layer_perceptron.png)
   
 |$x_1$|$x_2$|AND|NAND|OR|XOR|
 |:------:|:------:|:------:|:------:|:------:|:------:|
