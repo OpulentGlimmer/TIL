@@ -12,7 +12,7 @@
 - AND 게이트
 - input(x1, x2)값 둘 다 1이면 y=1인 게이트
 
-   ![alt text](./AND.png)
+![alt text](./AND.png)
 
 |x1|x2|AND(x1, x2)|
 |:------:|:------:|:------:|
