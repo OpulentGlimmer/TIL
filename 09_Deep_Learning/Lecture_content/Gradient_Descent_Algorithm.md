@@ -9,3 +9,5 @@
 
 ![alt text](./Picture/Gradient_Descent_Algorithm.png)
 
+$\theta_j$ := $\theta_j$  - $a\frac{\partial}{\partial\partial_j}$$j$($\theta_0$, $\theta_1$)
+
