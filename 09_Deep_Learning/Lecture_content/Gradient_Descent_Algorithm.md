@@ -1,6 +1,5 @@
 # 1. Gradient Descent Algorithm(경사 하강법)
 ## 1. 정의
----
 
 - 모델 파라미터가 무작위하게 초기화가 된 후 반복적으로 수정되어 비용 함수(Cost Function)를 최소화한다.
 - 학습 스텝 크기는 비용 함수(Cost Function)의 가울기(Gradient)에 비례한다.
@@ -8,7 +7,7 @@
 - 경사 하강법에서 중요한 파라미터는 스텝(반복적인 학습 알고리즘에서 학습의 각 단계를 표현)의 크기이다.
 
 ## 2. 그래프
----
+
 ![alt text](./Picture/Gradient_Descent_Algorithm.png)
 
 ## $\theta_j$ := $\theta_j$  - $a\frac{\partial}{\partial\partial_j}j(\theta_0$, $\theta_1$)
@@ -33,10 +32,14 @@
 - 비용 함수(Cost Function)를 최소화하는 모델 파라미터의 조합을 찾는 것이 가장 중요하다.
 
 ![alt text](./Picture/parameter_apply.png) 
+
 - 파라미터(Parameter)를 적용한 그림
-![alt text](./Picture/parameter_not_apply.png)
-- 파라미터(Parameter)를 적용하지 않은 그림
 - 
+![alt text](./Picture/parameter_not_apply.png)
+
+- 파라미터(Parameter)를 적용하지 않은 그림
+  
 - 모델 파라미터의 조합을 찾았을 때 경사 하강법 알고리즘이 곧바로 최솟값(mininum)으로 빠르게 도달할 수 있다.
+
 - 만약에 파라미터 값을 지정하지 않을 경우 거의 직각으로 향하다가 평편한 골짜기를 길게 나가게 되고, 비록 최솟값(mininum)에 도달하겠지만 시간이 오래 걸린다.
 
