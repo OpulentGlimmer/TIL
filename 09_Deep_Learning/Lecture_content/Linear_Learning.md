@@ -19,6 +19,6 @@
 - $b$는 $\int\limits(\theta) = \frac{1}{m}\displaystyle\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})^2$
 - $\int\limits(\theta)$는 에러(error)
 - $h_\theta(x^{(i)})$는 예측값
-- y^{(i)}는 정답
+- $y^{(i)}$는 정답
 
 
