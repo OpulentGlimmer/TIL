@@ -35,7 +35,7 @@ y = step_function_two(x)
 
 # 캔버스 설정
 fig = plt.figure(figsize=(7,7))  # 캔버스 생성
-fig.set_facecolor('white')
+fig.set_facecolor('white')  # 캔버스 색상 설정
 
 plt.plot(x, y)
 plt.ylim(-0.5, 2)
