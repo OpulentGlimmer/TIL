@@ -7,11 +7,10 @@
 
 # 2. 렐루 함수(ReLU function) 수식
 
-$$h(x)=\begin{cases} 
+$h(x)=\begin{cases} 
 x \\\ (x>0)\\ 
 0 \\\ (x\leq0) 
-\end{cases}$$
-
+\end{cases}$
 
 - 이 수식을 보면 양수면 자기 자신을 반환하고, 음수면 0을 반환한다.
 
