@@ -34,7 +34,7 @@
 - 학습률(Learning rate)은 얼마나 큰 보폭으로 움직일지를 결정해 주는 값이다.
 - $\frac{\partial}{\partial\partial_j}j(\theta_0$, $\theta_1$)는 기울기(Gradient)의 집합(CostFunction의 미분값)이다.
 
-## 4. 핵심
+## 4. 경사하강법 학습
 
 - 경사 하강법에서 중요한 파라미터는 스텝(반복적인 학습 알고리즘에서 학습의 각 단계를 표현)의 크기로 학습률(Learning rate) 하이퍼 파라미터(Hyper parameter)로 결정된다.
 - 학습률(Learnig Rate)이 너무 작으면 알고리즘이 수렴하기 위해 반복을 많이 진행해야 하므로 시간이 오래 걸린다.
@@ -51,5 +51,11 @@
 
 - 위의 그림은 파라미터(Parameter)를 적용하지 않은 그림
 - 파라미터 값을 지정하지 않을 경우 거의 직각으로 향하다가 평편한 골짜기를 길게 나가게 되고, 비록 최솟값(mininum)에 도달하겠지만 시간이 오래 걸린다.
+
+## 5. Gradient descent를 활용한 신경망의 학습 과정 정리
+- 모든 Parameter $\theta$를 초기화한다.
+- Cost Function상의 가장 낮은 지점을 향해 나아간다.
+- 선택한 Gradinet descent method를 적용해 $\theta$를 계속 업데이트(Updata)한다.
+
 
 
