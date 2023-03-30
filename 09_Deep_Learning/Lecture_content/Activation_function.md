@@ -10,7 +10,10 @@ $$h(x) = \begin{cases}
 1 \\ (x > 0)
 \end{cases}$$
 
+
 - 이 수식에서 퍼셉트론 수식의 결과인 $x$는 활성화 함수 $h(x)$에 들어가게 되고, 그 결과는 출력 값인 $y$로 나온다.
+
+---
 
 ![alt text](./Picture/Activation_function.png)
 
