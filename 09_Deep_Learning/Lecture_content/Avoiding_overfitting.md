@@ -51,7 +51,7 @@
 - 그림을 보면 파란 네모에서 이미지 데이터를 4,096그림으로 줄인 것을 볼 수 있다.
 - Alexnet 이미지 데이터를 4,096그림으로 줄인 이유는 이미지 데이터가 성능이 뛰어나고, overfitting을 줄일 수 있기 때문이다.
 
-## 2. Batch Normalization (2015)
+## 2. Batch normalization (2015)
 - 데이터 내 Column들의 Scale에 Model이 너무 민감해지는 것을 막아줌으로써 Input data에 대해 Standardization과 같은 Normalization을 적용하면 전반적으로 Model 성능이 높아지는 것이다.
 - 신경망의 경우 Normalization이 제대로 적용되지 않으면 최적의 cost지점으로 가는 길을 빠르게 찾지 못한다.
 - x데이터에 있는 열 데이터가 맞추어지지 않으면 $\theta_1$, $\theta_2$에 있는 scaling(데이터 전처리)에 영향을 받는다. (Feature error발생)
