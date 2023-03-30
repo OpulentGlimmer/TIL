@@ -1,5 +1,5 @@
 # 1. `시그모이드함수(Sigmoid function)` 의미
-**  $a(x)$ = 1 / (1 + $e^{-x}$)
+- $a(x)$ = 1 / (1 + $e^{-x}$)
 
 ```python
 import numpy as np
