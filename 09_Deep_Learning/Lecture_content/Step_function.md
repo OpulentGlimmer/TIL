@@ -1,8 +1,8 @@
 # 계단함수(Step_function)
 
-$$h(x) = \begin{cases}
-0 \\ (x\leq0) \\
-1 \\ (x>0)
+$$h(x)=\begin{cases} 
+0 \\\ (x\leq0)\\ 
+1 \\\ (x>0) 
 \end{cases}$$
 
 ```python
