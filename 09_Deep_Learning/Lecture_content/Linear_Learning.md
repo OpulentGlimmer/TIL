@@ -11,14 +11,3 @@
 
 ## 2. `다중 회귀분석`(Multivariate Regression Analysis)
 - `2개 이상`의 독립변수(x)가 1개의 종속변수(y)에 영향을 미칠 때
-
-## 3. Cost Function(비용함수)
-- 예측값과 실제 값의 `차이`를 기반으로 모델의 성능(정확도)을 판단하기 위한 함수
-- Linear regression의 경우 `Mean squared error function(평균 제곱 오차 함수)을 활용한다.
-- 여기서 MES(Cost)가 최소가 되도록 하는 $\theta$ (parameter, a, b)를 찾아야 한다. ( $y$ = $a_x$ + $b$ )
-- $b$는 $\int\limits(\theta) = \frac{1}{m}\displaystyle\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})^2$
-- $\int\limits(\theta)$는 에러(error)
-- $h_\theta(x^{(i)})$는 예측값
-- $y^{(i)}$는 정답
-
-
