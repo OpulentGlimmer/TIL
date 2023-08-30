@@ -14,5 +14,5 @@
 ![alt text](./Pictures/03_CentOS_install.png)
 ## 07. 세 번째에 있는 CentOS-7-x86_64-DVD-2009.iso 파일을 다운로드를 한다.
 ![alt text](./Pictures/04_CentOS_install.png)
-## 08. 가상머신을 만들기 위해서 Oracle VM VirtualBox 사이트인 https://www.virtualbox.org 에 접속한다.
+## 08. 가상머신을 만들기 위해서 Oracle VM VirtualBox 사이트인 https://www.virtualbox.org 에 접속한다
 
