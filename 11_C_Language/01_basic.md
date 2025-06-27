@@ -7,7 +7,6 @@
 - main 함수의 선언
 
 ```
-
 # include <stdio.h>
 
 int main(void)
